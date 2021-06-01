@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Swoosh</string>
+    <string name="headline_title">GO ALL IN</string>
+    <string name="caption_text">ON GOING ALL OUT</string>
+    <string name="description_text"><![CDATA[Find a team in your city & dominate the league]]></string>
+    <string name="get_started">Get Started</string>
 </resources>
