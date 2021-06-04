@@ -9,4 +9,6 @@
     <string name="womens">Womens</string>
     <string name="coed">Co-Ed</string>
     <string name="next">Next</string>
+    <string name="background_image">background image</string>
+    <string name="app_logo">app logo</string>
 </resources>

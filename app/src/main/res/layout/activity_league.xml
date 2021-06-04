@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/desiredleague_bg" />
+        app:srcCompat="@drawable/desiredleague_bg"
+        android:contentDescription="@string/background_image" />
 
     <ImageView
         android:id="@+id/logo"
@@ -27,7 +28,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/app_logo" />
 
     <TextView
         android:id="@+id/textView4"
