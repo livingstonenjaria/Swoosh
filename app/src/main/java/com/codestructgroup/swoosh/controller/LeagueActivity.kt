@@ -1,9 +1,10 @@
-package com.codestructgroup.swoosh
+package com.codestructgroup.swoosh.controller
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.codestructgroup.swoosh.EXTRA_LEAGUE
 import com.codestructgroup.swoosh.databinding.ActivityLeagueBinding
 
 class LeagueActivity : AppCompatActivity() {
