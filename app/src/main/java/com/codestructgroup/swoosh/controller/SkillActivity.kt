@@ -3,31 +3,29 @@ package com.codestructgroup.swoosh.controller
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import com.codestructgroup.swoosh.EXTRA_LEAGUE
-import com.codestructgroup.swoosh.EXTRA_SKILL
 import com.codestructgroup.swoosh.databinding.ActivitySkillBinding
+import com.codestructgroup.swoosh.model.Player
+import com.codestructgroup.swoosh.utilities.EXTRA_PLAYER
 
 class SkillActivity : BaseActivity() {
     private lateinit var binding: ActivitySkillBinding
-    private var league = ""
-    private var skill = ""
+    var player = Player("","")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySkillBinding.inflate(layoutInflater)
-        league = intent.getStringExtra(EXTRA_LEAGUE).toString()
+        player = intent.getParcelableExtra<Player>(EXTRA_PLAYER)!!
         binding.beginnerSkillBtn.setOnClickListener {
             binding.ballerSkillBtn.isChecked = false
-            skill = "beginner"
+            player.skill = "beginner"
         }
         binding.ballerSkillBtn.setOnClickListener {
             binding.beginnerSkillBtn.isChecked = false
-            skill = "baller"
+            player.skill = "baller"
         }
         binding.finishSkillBtn.setOnClickListener {
-            if (skill != ""){
+            if (player.skill != ""){
                 val finishIntent = Intent(this, FinishActivity::class.java)
-                finishIntent.putExtra(EXTRA_LEAGUE, league)
-                finishIntent.putExtra(EXTRA_SKILL, skill)
+                finishIntent.putExtra(EXTRA_PLAYER, player)
                 startActivity(finishIntent)
             }else{
                 Toast.makeText(this, "Please select a skill level", Toast.LENGTH_SHORT).show()
